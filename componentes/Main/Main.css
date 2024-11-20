@@ -1,0 +1,16 @@
+#results {
+display:grid;
+list-style:none;
+gap:20px;
+padding: 20px;
+grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+grid-auto-rows: 300px;
+}
+
+#results img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+
+}
