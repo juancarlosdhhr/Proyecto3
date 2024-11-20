@@ -26,19 +26,28 @@ printPhotos(photos);
 const container = document.querySelector("#results");
 const message = document.querySelector("#message");
 
-//Vaciamos el contendor para que no se sumen las fotos a las ya existentes
+if(photos.length === 0){
+container.innerHTML = "";
+const message =document.querySelector("#message");
+message.textContent = "Search another thing..."
+} else {
+
+//Vaciamos el contendor para que no se sumen las fotos a las ya existentes.
+//También vaciamos el texto del mensaje si todo funciona bien
 
 container.innerHTML = "";
+message.textContent = "He encontrado " + photos.length + " fotos:";
 
 for (const photo of photos) {//Creamos un bucle que recorra cada una de las fotos
 const li = document.createElement("li"); //creamos un li por cada foto
 li.innerHTML = `
-<img src=${photo.urls.regular} alt = "${photo.alt_description}" />
+<img src="${photo.urls.regular}" alt = "${photo.alt_description}";" />
 `;
 
 container.appendChild(li);
- } 
- };
+} 
+}
+};
 
 //Vamos a buscar el botón y le vamos a decir que cuando hagamos click sobre él pasen cosas
 
