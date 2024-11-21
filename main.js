@@ -1,10 +1,13 @@
+
+
 import './style.css'
-import Header from '../componentes/Header/Header';
-import Main from '../componentes/Main/Main';
-import Footer from '../componentes/footer/footer';
+import Header from './componentes/Header/Header'
+import Main from './componentes/Main/Main'
+import Footer from './componentes/Footer/Footer'
 
 
-const  CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
+/* const CLIENT_ID = import.meta.env.VITE_CLIENT_ID; */
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
  
 const buildWebsite = () => {
 Header()
