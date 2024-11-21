@@ -16,14 +16,17 @@ Footer()
 getPhotos("space")
 };
 
-const getPhotos = async (keyword) => {
-const data =  await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=20&client_id=${CLIENT_ID}`   
+const getPhotos = async (keyword, photoNum) => {
+const data =  await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=${photoNum}&client_id=${CLIENT_ID}`   
 );
 const results = await data.json();
 const photos = results.results;
 console.log(photos);
 printPhotos(photos);
 };
+
+//Cuando arranque la pagina va a sacar fotos de naturaleza y 20 resultados
+getPhotos("Landscape", "10");
 
  const printPhotos = (photos) =>{
 const container = document.querySelector("#results");
@@ -32,7 +35,7 @@ const message = document.querySelector("#message");
 if(photos.length === 0){
 container.innerHTML = "";
 const message =document.querySelector("#message");
-message.textContent = "Search another thing..."
+message.textContent = "Ups! No hemos encontrado ningún resultado. Busca otra cosa..."
 } else {
 
 //Vaciamos el contendor para que no se sumen las fotos a las ya existentes.

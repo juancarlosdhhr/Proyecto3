@@ -6,6 +6,13 @@ import "./Header.css";
 const template = () => `
 <h1>Pinterest</h1>
 <input type="text" id="searchInput" placeholder="Ex: Dogs" />
+
+<select id="countInput">
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="30">30</option>
+
+</select>
 <button id="searchBtn" >Search</button>
 `;
 

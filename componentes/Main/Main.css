@@ -16,6 +16,10 @@ border-radius: 10px;
 }
 
 #message {
-text-align: center;
-
-}
+    font-family: "Roboto", Arial, sans-serif; /* Fuente ligera y moderna */
+    font-size: 1rem;
+    color: #2e2d2d; /* Tono gris suave */
+    margin-top: 10px;
+    text-align: center;
+  }
+  
