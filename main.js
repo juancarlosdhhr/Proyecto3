@@ -14,7 +14,10 @@ const buildWebsite = () => {
   Main();
   Footer();
   getPhotos("space", 20, "landscape"); // Llamada inicial con orientación 'landscape'
+
 };
+
+
 
 const getPhotos = async (keyword, photoNum, orientation, order_by) => {
   // Corregir la llamada a la API para obtener las fotos
@@ -55,6 +58,8 @@ const printPhotos = (photos) => {
     }
   }
 };
+
+
 
 // Primero pintamos toda la web
 buildWebsite();

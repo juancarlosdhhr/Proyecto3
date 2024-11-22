@@ -4,7 +4,7 @@ import "./Header.css";
 //Creamos la plantilla de lo que va a tener dentro el Header
 
 const template = () => `
-<h1>Pinterest</h1>
+<h1 id="PinterestHome">Pinterest</h1>
 <input type="text" id="searchInput" placeholder="Ex: Dogs" />
 
 <select id="countInput">
@@ -32,6 +32,12 @@ const template = () => `
 
 const Header = () => {
 document.querySelector("header").innerHTML = template();
+
+// Recarga la página completa al hacer clic en el logotipo
+document.querySelector("#PinterestHome").addEventListener("click", () => {
+  location.reload();
+});
 };
+
 
 export default Header;
