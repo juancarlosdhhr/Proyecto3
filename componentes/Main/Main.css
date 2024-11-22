@@ -1,25 +1,25 @@
 #results {
-display:grid;
+display:flex;
 list-style:none;
 gap:20px;
 padding: 20px;
-grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-grid-auto-rows: 300px;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 #results img {
-width: 100%;
-height: 100%;
+max-width: 500px;
+height: 300px;
 object-fit: cover;
-
+padding: 20px;
 border-radius: 10px;
 }
 
 #message {
-    font-family: "Roboto", Arial, sans-serif; /* Fuente ligera y moderna */
-    font-size: 1rem;
-    color: #2e2d2d; /* Tono gris suave */
-    margin-top: 10px;
-    text-align: center;
-  }
+font-family: "Roboto", Arial, sans-serif; /* Fuente ligera y moderna */
+font-size: 1rem;
+color: #2e2d2d; /* Tono gris suave */
+margin-top: 10px;
+text-align: center;
+}
   

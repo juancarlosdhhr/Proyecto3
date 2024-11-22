@@ -11,8 +11,14 @@ const template = () => `
 <option value="10">10</option>
 <option value="20">20</option>
 <option value="30">30</option>
-
 </select>
+
+<select id="orientationInput">
+<option value="squarish">Squarish</option>
+<option value="landscape">Landscape</option>
+<option value="portrait">Portrait</option>
+</select>
+
 <button id="searchBtn" >Search</button>
 `;
 
