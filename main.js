@@ -16,9 +16,9 @@ const buildWebsite = () => {
   getPhotos("space", 20, "landscape"); // Llamada inicial con orientación 'landscape'
 };
 
-const getPhotos = async (keyword, photoNum, orientation) => {
+const getPhotos = async (keyword, photoNum, orientation, order_by) => {
   // Corregir la llamada a la API para obtener las fotos
-  const data = await fetch(`https://api.unsplash.com/search/photos?page=${currentPage}&query=${keyword}&per_page=${photoNum}&orientation=${orientation}&client_id=${CLIENT_ID}`);
+  const data = await fetch(`https://api.unsplash.com/search/photos?page=${currentPage}&query=${keyword}&per_page=${photoNum}&orientation=${orientation}&order_by=${order_by}&client_id=${CLIENT_ID}`);
   
   // Convertir la respuesta en JSON
   const results = await data.json(); // Corregir la sintaxis
@@ -68,9 +68,16 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
   
   //Almaceno el valor del select de filtro por numero de fotos 
   const photoNumValue = document.querySelector("#countInput").value;
+
+  //Almaceno el valor del select del filtro por relevancia
+  const relevantValue = document.querySelector("#orderByInput").value;
   
 
   
   
-  getPhotos(value, photoNumValue, orientationValue); // Hacer la búsqueda con los valores correctos
+  getPhotos(value, photoNumValue, orientationValue, relevantValue); // Hacer la búsqueda con los valores correctos
 });
+ 
+
+
+

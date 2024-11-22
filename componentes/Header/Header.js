@@ -13,6 +13,12 @@ const template = () => `
 <option value="30">30</option>
 </select>
 
+<select id="orderByInput">
+  <option value="relevant">Relevant</option>
+  <option value="latest">Latest</option>
+</select>
+
+
 <select id="orientationInput">
 <option value="squarish">Squarish</option>
 <option value="landscape">Landscape</option>
