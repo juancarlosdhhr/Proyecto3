@@ -13,7 +13,7 @@ const buildWebsite = () => {
   Header();
   Main();
   Footer();
-  getPhotos("space", 20, "landscape"); // Llamada inicial con orientación 'landscape'
+  getPhotos("travel", 20, "landscape"); // // Cuando arranque la página va a sacar fotos de viajes, 20 resultados en formato panorámico
 
 };
 
@@ -31,8 +31,7 @@ const getPhotos = async (keyword, photoNum, orientation, order_by) => {
   printPhotos(photos); // Pasamos las fotos a la función printPhotos
 };
 
-// Cuando arranque la página va a sacar fotos de naturaleza y 20 resultados
-getPhotos("Landscape", 20, "landscape");
+
 
 const printPhotos = (photos) => {
   const container = document.querySelector("#results");

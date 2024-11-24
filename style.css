@@ -56,13 +56,11 @@ text-transform: uppercase;
     }
   
     #results img {
-        height: auto;
-        width: 100%; 
-        /* max-width: 500px;  */
+      height: auto;
+      width: 100%; 
+    
     }
   
-
-
     footer {
       text-align: center; 
       padding: 15px;
