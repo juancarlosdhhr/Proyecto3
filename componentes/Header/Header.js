@@ -28,7 +28,7 @@ const template = () => `
 <button id="searchBtn" >Search</button>
 `;
 
-//Todo esto conforma el componente Header y lo que hace el componente Header es buscar la etiqueta Header y le incluye el template.
+//Todo esto conforma el componente Header y lo que hace el componente Header es buscar la etiqueta Header y le incluye el template
 
 const Header = () => {
 document.querySelector("header").innerHTML = template();
